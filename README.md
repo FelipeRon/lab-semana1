@@ -7,7 +7,10 @@
     uv sync
     uv run pytest -q
     uv run python main.py
- 
+
+#PERSONA A 
 ## Hallazgos
- 
+ -(A) Se encontro que en los datos hay columnas con datos nulos(?) de alrededor de 84%
+ -(A) No eran ni na, ni -200, sino un string de "?"
+  
 ## Decisiones de limpieza
