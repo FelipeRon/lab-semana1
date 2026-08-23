@@ -1,19 +1,20 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-#from src.analisis import (
+# from src.analisis import (
 #    recta_minimos_cuadrados,
 #    resumen_por_grupo,
 #    top_k,
-#)
+# )
 
-from src.carga import cargar, reporte_nulos, limpiar
+from src.lab_semana1.carga import cargar, reporte_nulos, limpiar
 
 
 URL = "https://archive.ics.uci.edu/static/public/183/data.csv"
 
 
 def main():
+
     # ---------------------------------
     # 1. Cargar dataset
     # ---------------------------------
@@ -34,18 +35,18 @@ def main():
     # ---------------------------------
     # Aquí debes escoger una columna categórica
     # disponible después de revisar el dataset.
-    
+
     # ---------------------------------
     # 4. Top 5
     # ---------------------------------
-    #top = top_k(
+    # top = top_k(
     #    df_limpio,
     #    "ViolentCrimesPerPop",
     #    5
-    #)
+    # )
 
-    #print("\n=== TOP 5 ===")
-    #print(top)
+    # print("\n=== TOP 5 ===")
+    # print(top)
 
     # ---------------------------------
     # 5. Mínimos cuadrados
@@ -58,10 +59,7 @@ def main():
     # ---------------------------------
     plt.figure()
 
-    plt.hist(
-        df_limpio["ViolentCrimesPerPop"],
-        bins=30
-    )
+    plt.hist(df_limpio["ViolentCrimesPerPop"], bins=30)
 
     plt.xlabel("ViolentCrimesPerPop")
     plt.ylabel("Frecuencia")
@@ -73,4 +71,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

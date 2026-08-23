@@ -5,16 +5,16 @@ import pandas as pd
 def cargar(url, na_values=None):
     return pd.read_csv(url, na_values=na_values)
 
-def reporte_nulos(df):
-    reporte = pd.DataFrame({
-        "nulos": df.isna().sum(),
-        "porcentaje": df.isna().mean() * 100,
-    })
 
-    return reporte.sort_values(
-        "nulos",
-        ascending=False
+def reporte_nulos(df):
+    reporte = pd.DataFrame(
+        {
+            "nulos": df.isna().sum(),
+            "porcentaje": df.isna().mean() * 100,
+        }
     )
+
+    return reporte.sort_values("nulos", ascending=False)
 
 
 def limpiar(df):
@@ -55,18 +55,12 @@ def limpiar(df):
 
 
 def guardar(df, ruta):
-    """
-    Guarda un DataFrame en formato Parquet.
 
-    Parámetros:
-    df (pd.DataFrame): El DataFrame que se desea guardar.
-    ruta (str): Ruta del archivo Parquet de salida.
+    # Guarda un DataFrame en formato Parquet.
 
-    Retorna:
-    str: La ruta del archivo guardado.
-    """
     df.to_parquet(ruta, index=False)
     return ruta
+
 
 if __name__ == "__main__":
     URL = "https://archive.ics.uci.edu/static/public/183/data.csv"

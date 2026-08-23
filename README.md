@@ -12,5 +12,10 @@
 ## Hallazgos
  -(A) Se encontro que en los datos hay columnas con datos nulos(?) de alrededor de 84%
  -(A) No eran ni na, ni -200, sino un string de "?"
-  
+ -(A) Se sigue el criterio de que si una columna tiene +80% de faltantes se limina y si tenemos menor al 80% se completa con la media de los valores de la columna y por el caso que sea un texto se ingresara en el na un texto del que mas se repita 
+ -(A) Se analisa los datos y se observa que la varianle de interes ViolentCrimesPerPop no tiene nulos por lo que se pueden eliminar columnas de datos faltantes que no son nuestro objetivo, cumpliendo lo anteiror.
+
 ## Decisiones de limpieza
+
+ -(A) Se sigue el criterio de que si una columna tiene +80% de faltantes se limina y si tenemos menor al 80% se completa con la media de los valores de la columna y por el caso que sea un texto se ingresara en el na un texto del que mas se repita 
+ -(A) Se analisa los datos y se observa que la varianle de interes ViolentCrimesPerPop no tiene nulos por lo que se pueden eliminar columnas de datos faltantes que no son nuestro objetivo, cumpliendo lo anteiror.
